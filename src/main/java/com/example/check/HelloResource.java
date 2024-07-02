@@ -9,6 +9,6 @@ public class HelloResource {
     @GET
     @Produces("text/plain")
     public String hello() {
-        return "Helalo, Worjldd!";
+        return "Helaglo, Worjldd!";
     }
 }
