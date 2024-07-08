@@ -90,6 +90,7 @@ public class CheckService {
 
     public double calculateDiscount(Item item, Product product, double personalDiscount) {
         double subtotal = product.getPrice() * item.getQuantity();
+        double subtotalWithDiscount = 0.0;
         return product.isWholesale_product() && item.getQuantity() >= 5
                 ? subtotal * 0.10
                 : subtotal * (personalDiscount / 100);
@@ -101,7 +102,7 @@ public class CheckService {
                 .filter(card -> String.valueOf(card.getNumber()).equals(discountCardNumber))
                 .mapToDouble(DiscountCard::getDiscount_amount)
                 .findFirst()
-                .orElse(0.0);
+                .orElse(0.02);
     }
 
     public List<Item> mergeItems(List<Item> items) {
