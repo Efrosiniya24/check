@@ -2,6 +2,7 @@ package main.java.ru.clevertec.check;
 
 import main.java.ru.clevertec.check.Exception.BalanceDebitCardException;
 import main.java.ru.clevertec.check.Exception.StartProject;
+import main.java.ru.clevertec.check.Model.Builder.CheckBuilder;
 import main.java.ru.clevertec.check.Model.Check;
 import main.java.ru.clevertec.check.Model.DiscountCard;
 import main.java.ru.clevertec.check.Model.Item;
@@ -40,7 +41,14 @@ public class CheckRunner {
             if (balanceDebitCard == 0)
                 throw new BalanceDebitCardException("\nВы не указали сумму на счете(\n");
 
-            CheckService checkService = new CheckService(new Check(items, products, discountCards, discountCardNumber, balanceDebitCard));
+            Check check = new CheckBuilder()
+                    .setItems(items)
+                    .setProducts(products)
+                    .setDiscountCards(discountCards)
+                    .setDiscountCardNumber(discountCardNumber)
+                    .setBalanceDebitCard(balanceDebitCard)
+                    .build();
+            CheckService checkService = new CheckService(check);
 
             checkService.print();
             checkService.saveToCsv("result.csv");

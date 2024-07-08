@@ -1,6 +1,7 @@
 package main.java.ru.clevertec.check.Service;
 
 import main.java.ru.clevertec.check.Exception.QuantityExceotion;
+import main.java.ru.clevertec.check.Model.Builder.ProductBuilder;
 import main.java.ru.clevertec.check.Model.DiscountCard;
 import main.java.ru.clevertec.check.Model.Product;
 
@@ -30,7 +31,16 @@ public class CsvReader {
             double price = Double.parseDouble(parts[2]);
             int quantityInStock = Integer.parseInt(parts[3]);
             boolean isWholesale = Boolean.parseBoolean(parts[4]);
-            return new Product(id, description, price, quantityInStock, isWholesale);
+
+            Product product = new ProductBuilder()
+                    .setId(id)
+                    .setDescription(description)
+                    .setPrice(price)
+                    .setQuantityInStock(quantityInStock)
+                    .setWholesale(isWholesale)
+                    .build();
+
+            return product;
         } catch (QuantityExceotion e) {
             LogError.getInstance().logErrorToCsv("INTERNAL SERVER ERROR");
             System.err.println(e);

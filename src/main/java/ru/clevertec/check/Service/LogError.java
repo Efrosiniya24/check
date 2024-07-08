@@ -4,12 +4,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class LogError {
-    private static final LogError INSTANCE = new LogError();
+    private static LogError INSTANCE = new LogError();
     private static final String ERROR_FILE = "ERROR.csv";
 
     private LogError() {}
 
     public static LogError getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new LogError();
+        }
         return INSTANCE;
     }
 

@@ -69,8 +69,8 @@ public class CheckService {
 
 
         } catch (IOException e) {
-            LogError.getInstance().logErrorToCsv("Failed to write to CSV file: " + e.getMessage());
-            System.err.println("Failed to write to CSV file: " + e.getMessage());
+            LogError.getInstance().logErrorToCsv("INTERNAL SERVER ERROR");
+            System.err.println(e.getMessage());
         }
         if (check.getBalanceDebitCard() < totalWithDiscount) {
             LogError.getInstance().logErrorToCsv("NOT ENOUGH MONEY");
