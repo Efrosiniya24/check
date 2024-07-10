@@ -1,18 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8a6e3d5-0a50-492a-9298-0566342a0a99" name="Changes" comment="" />
+    <list default="true" id="a8a6e3d5-0a50-492a-9298-0566342a0a99" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/DateTime/DateFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/DateTime/TimeFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Exception/BalanceDebitCardException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Exception/NoArgument.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Exception/ProductNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Exception/QuantityException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Exception/StartProjectException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/Builder/CheckBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/Builder/DiscountCardBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/Builder/ItemBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/Builder/ProductBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/Check.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/DiscountCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Service/CheckService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Service/CsvReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Service/LogError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Service/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/discountCards.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/products.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/CheckRunner.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2ijpF2ldo5G7zLOT2puzsOm4T6N" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -23,11 +61,24 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feature/entry-file",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="CheckRunner" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="main.java.ru.clevertec.check.CheckRunner" />
+      <module name="check" />
+      <option name="PROGRAM_PARAMETERS" value="3-1 2-5 5-1 discountCard=1111 balanceDebitCard=100 pathToFile=src/main/resources/products.csv saveToFile=./error_result.csv" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
