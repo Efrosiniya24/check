@@ -7,7 +7,7 @@ public class Parser {
         try {
             String[] parts = arg.split("-");
             if (parts.length != 2) {
-                LogError.getInstance().logErrorToCsv("INTERNAL SERVER ERROR", "result.csv");
+                LogError.getInstance().logErrorToCsv("INTERNAL SERVER ERROR","result.csv");
                 throw new IllegalArgumentException("Некорректный формат аргумента: " + arg);
             }
 
@@ -15,14 +15,13 @@ public class Parser {
             int quantity = Integer.parseInt(parts[1]);
             return new Item(id, quantity);
         } catch (NumberFormatException e) {
-            LogError.getInstance().logErrorToCsv("INTERNAL SERVER ERROR", "result.csv");
+            LogError.getInstance().logErrorToCsv("INTERNAL SERVER ERROR","result.csv");
             throw new IllegalArgumentException("Ошибка разбора числа в аргументе: " + arg);
         }
     }
 
     public static String parseStringArgument(String arg) {
-        String[] parts = arg.split("=");
-        return parts.length > 1 ? parts[1] : null;
+        return arg.split("=").length > 1 ? arg.split("=")[1] : null;
     }
 
     public static double parseBalanceDebitCard(String arg) {

@@ -4,34 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8a6e3d5-0a50-492a-9298-0566342a0a99" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/DateTime/DateFormat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/DateTime/TimeFormat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Exception/BalanceDebitCardException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Exception/NoArgument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Exception/ProductNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Exception/QuantityException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Exception/StartProjectException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/Builder/CheckBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/Builder/DiscountCardBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/Builder/ItemBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/Builder/ProductBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/Check.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/DiscountCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Service/CheckService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Service/CsvReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Service/LogError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Service/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/discountCards.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/products.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="a8a6e3d5-0a50-492a-9298-0566342a0a99" name="Changes" comment="entry-file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/CheckRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/CheckRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/CheckRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Service/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/clevertec/check/Service/Parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +49,7 @@
     <configuration name="CheckRunner" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.java.ru.clevertec.check.CheckRunner" />
       <module name="check" />
-      <option name="PROGRAM_PARAMETERS" value="3-1 2-5 5-1 discountCard=1111 balanceDebitCard=100 pathToFile=src/main/resources/products.csv saveToFile=./error_result.csv" />
+      <option name="PROGRAM_PARAMETERS" value="3-2 discountCard=1111 balanceDebitCard=100  pathToFile=src/main/resources/products.csv " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -89,6 +65,30 @@
       <updated>1720013736801</updated>
       <workItem from="1720013737909" duration="3000" />
     </task>
+    <task id="LOCAL-00001" summary="entry-file">
+      <option name="closed" value="true" />
+      <created>1720642199436</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720642199436</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="entry-file" />
+    <option name="LAST_COMMIT_MESSAGE" value="entry-file" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/clevertec/check/CheckRunner.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

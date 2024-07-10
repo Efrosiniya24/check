@@ -20,16 +20,15 @@ import static main.java.ru.clevertec.check.Service.Parser.*;
 
 public class CheckRunner {
     public static void main(String[] args) {
-        String defaultErrorFile = "result.csv";
-        String saveToFile = defaultErrorFile;
-
         try {
-            if (args.length < 3) throw new StartProjectException("\n\nНедостаточно аргументов(");
+            if (args.length < 3)
+                throw new StartProjectException("\n\nНедостаточно аргументов(");
 
             List<Item> items = new ArrayList<>();
             String discountCardNumber = null;
             double balanceDebitCard = 0;
             String pathToFile = null;
+            String saveToFile = null;
 
             for (String arg : args) {
                 if (arg.startsWith("discountCard="))
@@ -40,23 +39,21 @@ public class CheckRunner {
                     pathToFile = parseStringArgument(arg);
                 else if (arg.startsWith("saveToFile="))
                     saveToFile = parseStringArgument(arg);
-                else if (arg.contains("-")) // дополнительная проверка для аргументов с "-"
-                    items.add(parseItem(arg));
                 else
-                    throw new IllegalArgumentException("Некорректный формат аргумента: " + arg);
+                    items.add(parseItem(arg));
             }
 
             if (balanceDebitCard == 0)
                 throw new BalanceDebitCardException("\nВы не указали сумму на счете(\n");
 
             if (saveToFile == null) {
-                LogError.getInstance().logErrorToCsv("BAD REQUEST", defaultErrorFile);
+                LogError.getInstance().logErrorToCsv("BAD REQUEST","result.csv");
                 throw new NoArgument("\nНе указан saveToFile\n");
             }
 
             if (pathToFile == null) {
-                LogError.getInstance().logErrorToCsv("BAD REQUEST", saveToFile);
-                throw new NoArgument("\nНе указан pathToFile\n");
+                LogError.getInstance().logErrorToCsv("BAD REQUEST",saveToFile);
+                throw new NoArgument("\nNo pathToFile\n");
             }
 
             List<Product> products = CsvReader.readProducts(pathToFile);
@@ -74,13 +71,12 @@ public class CheckRunner {
             checkService.print();
             checkService.saveToCsv(saveToFile);
         } catch (StartProjectException | BalanceDebitCardException e) {
-            LogError.getInstance().logErrorToCsv("BAD REQUEST", saveToFile);
+            LogError.getInstance().logErrorToCsv("BAD REQUEST", "result.csv");
             System.err.println(e);
         } catch (NoArgument e) {
-            LogError.getInstance().logErrorToCsv("BAD REQUEST", saveToFile);
             System.err.println(e);
         } catch (IOException e) {
-            LogError.getInstance().logErrorToCsv("INTERNAL SERVER ERROR", saveToFile);
+            LogError.getInstance().logErrorToCsv("INTERNAL SERVER ERROR","result.csv");
             throw new RuntimeException(e);
         }
     }
